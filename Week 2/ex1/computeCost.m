@@ -13,9 +13,13 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-
-
-
+for iter = 1:m
+    data = X(iter, :);
+    h_value = data * theta;
+    term = h_value - y(iter);
+    J = J + (term * term);
+end
+J = J / (2 * m);
 
 % =========================================================================
 
